@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/sell.css">
+</head>
+<body>
+    <section class="mainContainer">
+        <div class="sellBoard">
+            <div class="productList">
+                <p>Product Cart</p>
+                <ul id="listProduct">
+                    <ol class="productLine">
+                        <select name="products" form="sellP">
+                            <option value="1">A</option>
+                            <option value="1">B</option>
+                            <option value="1">C</option>
+                        </select>
+                        <input type="text" placeholder="Unit Price">
+                        <input type="text" placeholder="Qty">
+                        <input type="text" placeholder="Bonus">
+                        <input type="text" placeholder="Total Price">
+                    </ol>
+                </ul>
+                <div class="totalSection">
+                    <div class="accountBoxs">
+                        <label for="">Total</label>
+                        <input type="text" >
+                        <label for="">Pay</label>
+                        <input type="text" >
+                        <label for="">Balance</label>
+                        <input type="text" >
+                    </div>
+                    <div class="plusMinusBtn">
+                        <button onclick="addProduct()" class="smBtn">+</button>
+                        <button onclick="removeProduct()" id="decrement" class="smBtn">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="paymentRecieve">
+                <p>Invoice By: <span></span></p>
+                <div>
+                    <p>Order of</p>
+                <select name="products" form="sellP">
+                    <option value="1">A</option>
+                    <option value="1">B</option>
+                    <option value="1">C</option>
+                </select>
+                <label for="">Balance</label>
+                <input type="text">
+                </div>
+                <div class="btnSection">
+                    <button title="Add Customer" class="btn"><i class="fa-solid fa-person"></i></button>
+                    <button title="Payment Recieve" class="btn"><i class="fa-solid fa-hand-holding-dollar"></i></button>
+                    <button title="Invoice List" class="btn"><i class="fa-solid fa-clipboard-list"></i></button>
+                    <button title="Logout" class="smBtn"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        const container = document.getElementById('listProduct');
+        const addProduct=()=>{
+            const liChild = document.createElement('ol');
+            liChild.innerHTML=
+            `
+                    <select name="products" form="sellP">
+                        <option value="1">A</option>
+                        <option value="1">b</option>
+                        <option value="1">C</option>
+                    </select>
+                    <input type="text" placeholder="Unit Price">
+                    <input type="text" placeholder="Qty">
+                    <input type="text" placeholder="Bonus">
+                    <input type="text" placeholder="Total Price">
+                `;
+            liChild.classList.add("productLine")
+            container.appendChild(liChild);
+        }
+        const removeProduct=()=>{
+            const list = document.querySelectorAll(".productLine");
+            console.log(typeof(list.length));
+            if(list.length > 1){
+                container.removeChild(container.lastChild);
+            } 
+        }
+    </script>
+
+     <!-- Font Awesome -->
+     <script src="https://kit.fontawesome.com/e027f13b6d.js" crossorigin="anonymous"></script>
+</body>
+</html>

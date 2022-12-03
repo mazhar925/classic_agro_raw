@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <title>Bank</title>
+</head>
+<body>
+    <div class="visibleBody">
+        <nav>
+            <ul class="navContainer">
+                <li class="navTitle"><h3>Classical Agro</h3></li>
+                <li class="navList"><a href=""><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li class="navList"><a href="./product.html"><i class="fa-solid fa-boxes-stacked"></i>Product</a></li>
+                <li class="navList"><a href="./customer.html"><i class="fa-solid fa-cart-shopping"></i>Customer</a></li>
+                <li class="navList"><a href="./user.html"><i class="fa-solid fa-address-card"></i>User</a></li>
+                <li class="navList"><a href="./bank.html"><i class="fa-solid fa-building-columns"></i>Bank</a></li>
+                <li class="navList"><a href=""><i class="fa-solid fa-clipboard-check"></i>Report</a></li>
+                <li class="navList"><button class="loginBtn" title="Log Out"><i class="fa-solid fa-arrow-right-to-bracket"></i></button></li>
+            </ul>
+        </nav>
+        <main class="mainSection">
+            <div class="stockSection">
+                <button class="btn btnGeneral">Add Bank</button>
+                <button class="btn btnAlert">Money Withdraw</button>
+                <button class="btn btnPrimary">Money Deposite</button>
+            </div>
+            <div class="productSection">
+                <div class="searchBar">
+                    <input type="text" placeholder="Bank Name">
+                    <button class="searchBtn">Search</button>
+                </div>
+                <div class="productTableContainer">
+                    <table class="productTable">
+                        <caption><h3>Bank List</h3></caption>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Bank Name</th>
+                                <th>Withdraw</th>
+                                <th>Deposite</th>
+                                <th>Balance</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Pagla Bank</td>
+                                <td>5302</td>
+                                <td>504</td>
+                                <td>12032</td>
+                                <td>
+                                    <input type="checkbox" name="activity" id="" disabled>
+                                </td>
+                                <td>
+                                    <button class="tableBtn">Edit</button>
+                                    <button class="tableBtn">Ledger</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="center">
+                    <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">&raquo;</a>
+                    </div>
+                  </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e027f13b6d.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sellBoard{
+    width: 90%;
+    height: 90%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+.productList{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.productList p{
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+#listProduct{
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    overflow-y: scroll;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.paymentRecieve{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.btnSection{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn{
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #26363e;
+    color: #fff;
+    border-radius: 5px;
+}
+.smBtn{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #26363e;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.smBtn:hover, .btn:hover{
+    background-color: #252E33;
+    color: rgb(220, 220, 220);
+}
+.totalSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.plusMinusBtn{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    padding: 5px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(76, 76, 76);
+  }
